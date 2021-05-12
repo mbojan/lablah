@@ -2,5 +2,8 @@
 
 export(cdbk_df)
 export(cdbk_dt)
+export(misranges)
+export(misranges_df)
+export(misvals)
 export(vallabs)
 export(varlabs)
