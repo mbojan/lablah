@@ -1,2 +1,3 @@
 # lablah
-Tools for creatinh/working/reporting labelled data
+
+Tools for creating/working/reporting labelled data
