@@ -9,6 +9,7 @@ Authors@R:
            comment = c(ORCID = "0000-0001-7503-852X"))
 Description: Labelled data is ubiquitous. Package 'lablah' provides extra tools
   for creating, working, and reporting based on labelled data.
+Imports: tibble, labelled
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
