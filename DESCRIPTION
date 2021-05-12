@@ -1,5 +1,5 @@
 Package: lablah
-Title: What the Package Does (One Line, Title Case)
+Title: Working with Labelled Data on Steroids
 Version: 0.1-0
 Authors@R: 
     person(given = "Michal",
@@ -7,9 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "michal2992@gmail.com",
            comment = c(ORCID = "0000-0001-7503-852X"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Labelled data is ubiquitous. Package 'lablah' provides extra tools
+  for creating, working, and reporting based on labelled data.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
