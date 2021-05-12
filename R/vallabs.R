@@ -14,7 +14,7 @@
 vallabs <- function(data) {
   vl <- purrr::map(
     labelled::val_labels(data),
-    ~ tibble::enframe,
+    tibble::enframe,
     name = "label",
     value = "value"
   )
