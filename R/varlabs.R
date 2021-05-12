@@ -1,4 +1,4 @@
-#' Data frame of variable labels
+#' Tibble of variable labels
 #'
 #' @param data data frame with labelled variables
 #'

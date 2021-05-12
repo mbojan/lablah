@@ -2,7 +2,7 @@
 % Please edit documentation in R/varlabs.R
 \name{varlabs}
 \alias{varlabs}
-\title{Data frame of variable labels}
+\title{Tibble of variable labels}
 \usage{
 varlabs(data)
 }
@@ -17,7 +17,7 @@ A tibble with columns
 }
 }
 \description{
-Data frame of variable labels
+Tibble of variable labels
 }
 \seealso{
 \code{\link[labelled:var_label]{labelled::var_label()}}
