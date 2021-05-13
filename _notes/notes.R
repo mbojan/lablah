@@ -1,6 +1,8 @@
 d <- haven::read_sav("f:/michal/Desktop/SOCIAL_DIAGNOSIS_H_2000_2015.SAV",
                      user_na = TRUE, n_max=0)
 
+cdbk_dt(d)
+
 # User missing values
 nas <- lapply(d, labelled::na_values)
 nnull <- sapply(nas, is.null)
