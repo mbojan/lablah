@@ -11,6 +11,8 @@
 #' @export
 
 varlabs <- function(data) {
-  varlabs <- labelled::var_label(data)
-  tibble::enframe(unlist(varlabs), name = "variable", value = "label")
+  varl <- labelled::var_label(data)
+  isnull <- sapply(varl, is.null)
+  varl[isnull] <- list("")
+  tibble::enframe(unlist(varl), name = "variable", value = "label")
 }
