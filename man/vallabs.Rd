@@ -2,16 +2,25 @@
 % Please edit documentation in R/vallabs.R
 \name{vallabs}
 \alias{vallabs}
+\alias{vallabs.data.frame}
+\alias{vallabs.default}
 \title{List of tibbles with value labels}
 \usage{
-vallabs(data)
+vallabs(object, ...)
+
+\method{vallabs}{data.frame}(object, ...)
+
+\method{vallabs}{default}(object, ...)
 }
 \arguments{
 \item{data}{data frame with variables having value labels}
 }
 \value{
-A list of tibbles (or \code{NULL}s of no value labels are present) named
-with variable names. Each tibble has columns:
+If \code{object} is a data frame \code{vallabs()} returns a list of tibbles (or
+\code{NULL}s of no value labels are present) named with variable names. Each
+tibble has columns as described in the default method.
+
+The default method returns a single tibble with columns:
 \itemize{
 \item \code{label} - Value label
 \item \code{value} - Value
@@ -20,6 +29,13 @@ with variable names. Each tibble has columns:
 \description{
 List of tibbles with value labels
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{data.frame}: Given a data frame
+
+\item \code{default}: default
+}}
+
 \seealso{
 \code{\link[labelled:val_labels]{labelled::val_labels()}}
 }
