@@ -10,10 +10,15 @@ Authors@R:
 Description: Labelled data is ubiquitous. Package 'lablah' provides extra tools
   for creating, working, and reporting based on labelled data.
 Imports: 
+  DT,
   dplyr,
+  glue,
   labelled, 
-  purrr, 
-  tibble 
+  purrr,
+  rlang,
+  tibble,
+  tidyr,
+  tidyselect
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
