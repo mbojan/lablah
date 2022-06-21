@@ -20,7 +20,8 @@ seems_categorical(x)
 \item{x}{a vector for which \code{\link[=is.atomic]{is.atomic()}} is \code{TRUE}}
 }
 \value{
-All functions return \code{TRUE} or \code{FALSE} (a logical scalar).
+All \verb{seems_*()} functions return \code{TRUE} or \code{FALSE} (a logical
+scalar).
 }
 \description{
 Given a vector \code{x} guess what kind of "type" it is, where "type"
@@ -29,23 +30,23 @@ analyze/visualize. These functions are used internally to determine default
 behavior of some other functions.
 
 \itemize{
-\item \code{\link[=seems_integer]{seems_integer()}} -- Returns \code{TRUE} if \code{x} is \code{\link[=typeof]{typeof()}}
+\item \code{seems_integer()} -- Returns \code{TRUE} if \code{x} is \code{\link[=typeof]{typeof()}}
 integer or is a numeric with all values being in fact integers (i.e. equal
 to \code{round(x)}).
 }
 
 \itemize{
-\item \code{\link[=seems_continuous]{seems_continuous()}} -- Returns \code{TRUE} if \code{x} is numeric and,
+\item \code{seems_continuous()} -- Returns \code{TRUE} if \code{x} is numeric and,
 if an integer, has more than 10 distinct values.
 }
 
 \itemize{
-\item \code{\link[=seems_discrete]{seems_discrete()}} -- Returns \code{TRUE} if \code{x} does not seem to
+\item \code{seems_discrete()} -- Returns \code{TRUE} if \code{x} does not seem to
 be continuous.
 }
 
 \itemize{
-\item \code{\link[=seems_categorical]{seems_categorical()}} -
+\item \code{seems_categorical()} -
 }
 }
 \examples{
@@ -58,7 +59,9 @@ seems_continuous(1:5)       # FALSE
 seems_continuous(1:11)      # TRUE
 seems_continuous(runif(5))  # TRUE
 
-# Summarize variables of `mtcars` in a type-dependent way:
+# Summarize variables of `mtcars` in a type-dependent way by drawing a
+# histogram for continuous ones and barchart with counts for non-continuous
+# ones.
 iscont <- vapply(mtcars, seems_continuous, logical(1))
 layout(matrix(1:12, 3, 4))
 for(n in names(mtcars)) {

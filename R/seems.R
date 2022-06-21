@@ -9,7 +9,8 @@
 #'
 #' @param x a vector for which [is.atomic()] is `TRUE`
 #'
-#' @return All functions return `TRUE` or `FALSE` (a logical scalar).
+#' @return All `seems_*()` functions return `TRUE` or `FALSE` (a logical
+#'   scalar).
 
 
 
@@ -18,7 +19,7 @@
 
 
 #' @rdname seems
-#' @description - [seems_integer()] -- Returns `TRUE` if `x` is [typeof()]
+#' @description - `seems_integer()` -- Returns `TRUE` if `x` is [typeof()]
 #'   integer or is a numeric with all values being in fact integers (i.e. equal
 #'   to `round(x)`).
 #'
@@ -37,7 +38,7 @@ seems_integer <- function(x) {
 
 
 #' @rdname seems
-#' @description - [seems_continuous()] -- Returns `TRUE` if `x` is numeric and,
+#' @description - `seems_continuous()` -- Returns `TRUE` if `x` is numeric and,
 #'   if an integer, has more than 10 distinct values.
 #'
 #' @export
@@ -47,7 +48,9 @@ seems_integer <- function(x) {
 #' seems_continuous(1:11)      # TRUE
 #' seems_continuous(runif(5))  # TRUE
 #'
-#' # Summarize variables of `mtcars` in a type-dependent way:
+#' # Summarize variables of `mtcars` in a type-dependent way by drawing a
+#' # histogram for continuous ones and barchart with counts for non-continuous
+#' # ones.
 #' iscont <- vapply(mtcars, seems_continuous, logical(1))
 #' layout(matrix(1:12, 3, 4))
 #' for(n in names(mtcars)) {
@@ -71,7 +74,7 @@ seems_continuous <- function(x) {
 }
 
 #' @rdname seems
-#' @description - [seems_discrete()] -- Returns `TRUE` if `x` does not seem to
+#' @description - `seems_discrete()` -- Returns `TRUE` if `x` does not seem to
 #'   be continuous.
 #'
 #' @export
@@ -82,7 +85,7 @@ seems_discrete <- function(x) {
 
 
 #' @rdname seems
-#' @description - [seems_categorical()] -
+#' @description - `seems_categorical()` -
 #'
 #' @export
 seems_categorical <- function(x) {
