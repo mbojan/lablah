@@ -1,6 +1,8 @@
 #' Extract value labels and return as tibble(s)
 #'
-#' @param data data frame with variables having value labels
+#' @param object R object, typically a vector or data frame. See below for
+#'   available methods
+#' @param ... other arguments to/from other methods. Currently ignored.
 #'
 #' @seealso [labelled::val_labels()]
 #'

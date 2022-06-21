@@ -2,38 +2,41 @@
 % Please edit documentation in R/vallabs.R
 \name{vallabs}
 \alias{vallabs}
-\alias{vallabs.data.frame}
 \alias{vallabs.default}
-\title{List of tibbles with value labels}
+\alias{vallabs.data.frame}
+\title{Extract value labels and return as tibble(s)}
 \usage{
 vallabs(object, ...)
 
-\method{vallabs}{data.frame}(object, ...)
-
 \method{vallabs}{default}(object, ...)
+
+\method{vallabs}{data.frame}(object, ...)
 }
 \arguments{
-\item{data}{data frame with variables having value labels}
+\item{object}{R object, typically a vector or data frame. See below for
+available methods}
+
+\item{...}{other arguments to/from other methods. Currently ignored.}
 }
 \value{
-If \code{object} is a data frame \code{vallabs()} returns a list of tibbles (or
-\code{NULL}s of no value labels are present) named with variable names. Each
-tibble has columns as described in the default method.
-
 The default method returns a single tibble with columns:
 \itemize{
 \item \code{label} - Value label
 \item \code{value} - Value
 }
+
+If \code{object} is a data frame \code{vallabs()} returns a list of tibbles (or
+\code{NULL}s of no value labels are present) named with variable names. Each
+tibble has columns as described in the default method.
 }
 \description{
-List of tibbles with value labels
+Extract value labels and return as tibble(s)
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{data.frame}: Given a data frame
+\item \code{default}: Extract value labels and return a tibble.
 
-\item \code{default}: default
+\item \code{data.frame}: Extract value labels from all the columns and return a list of tibbles.
 }}
 
 \seealso{
