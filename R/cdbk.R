@@ -24,12 +24,13 @@ cdbk_df <- function(data) {
 #' @return Function [cdbk_dt()] uses [DT::datatable()] to generate a browsable
 #'   and searchable codebook based on the documentation.
 #'
+#' @importFrom rlang .data
 #' @export
 cdbk_dt <- function(data, ...) {
   r <- dplyr::mutate(
     cdbk_df(data),
     value_labels = purrr::map_chr(
-      value_labels,
+      .data$value_labels,
       ~ with(.x, paste(glue::glue("{value}: {label}"), collapse = "<br/>"))
       )
   )
