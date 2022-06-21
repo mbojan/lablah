@@ -34,7 +34,7 @@ misranges_df <- function(data) {
   l <- misranges(data)
   isnull <- vapply(l, is.null, logical(1))
   dplyr::bind_rows(
-    lapply(l[!isnull], setNames, c("from", "to")),
+    lapply(l[!isnull], stats::setNames, c("from", "to")),
     .id="variable"
   )
 }
