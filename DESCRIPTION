@@ -16,6 +16,7 @@ Imports:
   labelled, 
   purrr,
   rlang,
+  stats,
   tibble,
   tidyr,
   tidyselect
