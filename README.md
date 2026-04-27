@@ -5,3 +5,10 @@
 <!-- badges: end -->
 
 Tools for creating/working/reporting labelled data
+
+## Install
+
+```r
+remotes::install_github("mbojan/lablah")
+```
+
